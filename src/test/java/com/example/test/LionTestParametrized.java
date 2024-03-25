@@ -2,6 +2,7 @@ package com.example.test;
 
 import com.example.Feline;
 import com.example.Lion;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -35,6 +36,7 @@ public class LionTestParametrized {
     public void testDoesHaveMane() {
         Feline mockFeline = mock(Feline.class);
         Lion lion = new Lion(sex,mockFeline);
+        lion.doesHaveMane();
         assertEquals(isHaveMane, lion.doesHaveMane());
     }
 }
